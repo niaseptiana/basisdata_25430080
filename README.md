@@ -2,7 +2,7 @@ IDENTITAS MAHASISWA
 
 
 
-=======================
+========================
 
 Nama	: Nia Septiana
 
