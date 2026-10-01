@@ -1,0 +1,5 @@
+git add .
+
+git commit -m "p01: inisialisasi repositori dan skrip lingkungan"
+
+git push
