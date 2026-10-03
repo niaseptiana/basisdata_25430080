@@ -6,3 +6,7 @@ CREATE DATABASE kopma_080
 CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 CREATE USER 'mhs_080'@'localhost' IDENTIFIED BY '<password_kerja>';
 GRANT ALL PRIVILEGES ON kopma_080.* TO 'mhs_080'@'localhost';
+CREATE USER 'tamu_080'@'localhost' IDENTIFIED BY '<password_kerja>';
+GRANT ALL PRIVILEGES ON kopma_080.* TO 'tamu_080'@'localhost';
+
+
