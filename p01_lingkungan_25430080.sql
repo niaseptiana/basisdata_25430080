@@ -1,4 +1,4 @@
--- Praktikum Basis Data - Semester 3
+-- Praktikum Basis Data-Semester 3
 -- p01_lingkungan_25430080.sql
 -- Password sengaja diganti penanda. JANGAN commit password asli.
 
