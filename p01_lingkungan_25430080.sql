@@ -16,6 +16,12 @@ GRANT ALL PRIVILEGES ON kopma_080.* TO 'mhs_080'@'localhost';
 
 CREATE USER IF NOT EXISTS 'tamu_080'@'localhost' IDENTIFIED BY '<password_kerja>';
 GRANT SELECT ON kopma_080.*TO 'tamu_080'@'localhost';
+
+--Membuat user dev_080
+
+CREATE USER IF NOT EXISTS 'dev_080'@'localhost' IDENTIFIED BY '<password_kerja>';
+GRANT SELECT ON kopma_080.*TO 'dev_080'@'localhost';
+
 FLUSH PRIVILEGES;
 
 
