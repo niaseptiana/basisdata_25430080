@@ -22,7 +22,7 @@ Keluhan pengguna yang melatarbelakangi kebutuhan data:
 | PB-04 | Menerima barang dari pemasok | Petugas gudang | Barang datang bersama faktur |
 | PB-05 | Menyusun laporan bulanan | Ketua koperasi | Awal bulan |
 | PB-06 | Mengelola data pemasok | Petugas gudang | Pemasok baru atau data pemasok berubah |
-| PB-07 | Mengelola data barang | Petugas gudang | Barang baru atau harga atau batas minimum berubah |
+| PB-07 | Mengelola data barang | Petugas gudang | Barang baru, harga baru dari Ketua, atau batas minimum berubah |
 | PB-08 | Mengelola status keanggotaan | Ketua koperasi | Anggota diaktifkan atau dinonaktifkan |
 | PB-09 | Mengelola data petugas | Ketua koperasi | Petugas baru atau berganti peran |
 
@@ -31,7 +31,7 @@ PB-06 sampai PB-09 ditambahkan setelah pemeriksaan matriks CRUD (bagian 7).
 Alur per aktor:
 - **Kasir:** mendaftarkan anggota (PB-01), mencatat penjualan, memeriksa saldo poin, menerapkan penukaran poin, mencatat poin yang diperoleh, dan mencetak nota (PB-02).
 - **Petugas gudang:** memeriksa stok, memesan ke pemasok (PB-03), menerima barang dan menambah stok (PB-04), mengelola data pemasok dan barang (PB-06, PB-07).
-- **Ketua koperasi:** menerima laporan bulanan (PB-05), mengelola status anggota dan data petugas (PB-08, PB-09).
+- **Ketua koperasi:** menerima laporan bulanan (PB-05), mengelola status anggota dan data petugas (PB-08, PB-09), serta menetapkan harga jual barang yang kemudian dimasukkan petugas gudang (PB-07).
 
 ## 3. Dokumen sumber yang dianalisis
 
@@ -43,7 +43,7 @@ Alur per aktor:
 | Faktur pemasok | nomor faktur, tanggal, pemasok, barang, qty, harga beli | Pemasok, Pembelian |
 | Wawancara | peran petugas, keluhan pengguna | Petugas, aturan bisnis |
 
-Pembedahan nota penjualan (cocokkan dengan isian pada Gambar 2.5; bila nota anggota kini mencetak poin, Gambar 2.5 perlu disesuaikan):
+Pembedahan nota penjualan (nota anggota juga mencetak potongan poin dan poin yang diperoleh):
 
 | Isian nota | Disimpan / Turunan |
 |---|---|
@@ -130,7 +130,7 @@ Catatan pemeriksaan:
 | kode_barang | Kode barang | BRG-014 | Unik | Petugas gudang |
 | nama_barang | Nama barang | Pulpen biru | Wajib diisi | Petugas gudang |
 | kategori_barang | Kategori barang | Alat tulis | Alat tulis, makanan ringan, atau minuman | Petugas gudang |
-| harga_jual_barang | Harga jual terkini | 4000 | Bilangan bulat ≥ 0 (rupiah) | Ketua |
+| harga_jual_barang | Harga jual terkini | 4000 | Bilangan bulat ≥ 0 (rupiah) | Ketua (menetapkan), Petugas gudang (memelihara) |
 | stok_barang | Jumlah barang tersedia | 35 | Bilangan bulat ≥ 0 (AB-03) | Petugas gudang |
 | batas_minimum_stok_barang | Batas stok untuk memicu pesanan | 10 | Bilangan bulat ≥ 0 (AB-06) | Petugas gudang |
 | no_nota_penjualan | Nomor nota penjualan | PJ-2609-0142 | Unik per nota (AB-01) | Kasir |
